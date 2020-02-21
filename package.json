@@ -1,22 +1,25 @@
 {
-  "name": "electron-quick-start",
+  "name": "zipcode2kml",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "An application for converting zipcodes into kml files for overlaying on maps",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "asar pack zipcode2kml-darwin-x64/zipcode2kml.app/Contents/Resources/app zipcode2kml-darwin-x64/zipcode2kml.app/Contents/Resources/app.asar",
+    "build": "electron-packager . zipcode2kml && cp Icon.icns zipcode2kml-darwin-x64/zipcode2kml.app/Contents/Resources/electron.icns"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/ehardacre/zipcode2kml",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Maps",
+    "zipcode",
+    "kml"
   ],
-  "author": "GitHub",
+  "author": "Peak Studios",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^8.0.0"
+    "asar": "^2.1.0",
+    "electron": "^8.0.0",
+    "electron-packager": "^14.2.1",
+    "fs-extra": "^8.1.0"
   }
 }

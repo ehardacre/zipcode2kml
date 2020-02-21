@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <LookAt>
+      <longitude>-102</longitude>
+      <latitude>38.5</latitude>
+      <range>7000000</range>
+      <tilt>10</tilt>
+      <heading>0</heading>
+    </LookAt>
+    <name>cb_2016_us_zcta510_500k</name>
+    <visibility>1</visibility>
+    <Style id="KMLStyler">
+      <IconStyle>
+        <scale>0.8</scale>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1.0</scale>
+      </LabelStyle>
+      <LineStyle>
+        <color>ffbc822f</color>
+        <width>2</width>
+        <gx:labelVisibility>0</gx:labelVisibility>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fe1ca9e</color>
+      </PolyStyle>
+    </Style>
+    <Schema name="cb_2016_us_zcta510_500k" id="kml_schema_ft_cb_2016_us_zcta510_500k">
+      <SimpleField type="xsd:string" name="ZCTA5CE10">
+        <displayName>ZCTA5CE10</displayName>
+      </SimpleField>
+      <SimpleField type="xsd:string" name="AFFGEOID10">
+        <displayName>AFFGEOID10</displayName>
+      </SimpleField>
+      <SimpleField type="xsd:string" name="GEOID10">
+        <displayName>GEOID10</displayName>
+      </SimpleField>
+      <SimpleField type="xsd:double" name="ALAND10">
+        <displayName>ALAND10</displayName>
+      </SimpleField>
+      <SimpleField type="xsd:double" name="AWATER10">
+        <displayName>AWATER10</displayName>
+      </SimpleField>
+    </Schema>
+    <Folder id="kml_ft_cb_2016_us_zcta510_500k">
+      <name>cb_2016_us_zcta510_500k</name>
+    </Folder>
+    <Placemark id="cb_2016_us_zcta510_500k.kml">
+      <name>&lt;at&gt;&lt;openparen&gt;73664&lt;closeparen&gt;</name>
+      <visibility>1</visibility>
+      <description>&lt;center&gt;&lt;table&gt;&lt;tr&gt;&lt;th colspan='2' align='center'&gt;&lt;em&gt;Attributes&lt;/em&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr bgcolor="#E3E3F3"&gt;
+&lt;th&gt;ZCTA5CE10&lt;/th&gt;
+&lt;td&gt;73664&lt;/td&gt;
+&lt;/tr&gt;&lt;tr bgcolor=""&gt;
+&lt;th&gt;AFFGEOID10&lt;/th&gt;
+&lt;td&gt;8600000US73664&lt;/td&gt;
+&lt;/tr&gt;&lt;tr bgcolor="#E3E3F3"&gt;
+&lt;th&gt;GEOID10&lt;/th&gt;
+&lt;td&gt;73664&lt;/td&gt;
+&lt;/tr&gt;&lt;tr bgcolor=""&gt;
+&lt;th&gt;ALAND10&lt;/th&gt;
+&lt;td&gt;338250127&lt;/td&gt;
+&lt;/tr&gt;&lt;tr bgcolor="#E3E3F3"&gt;
+&lt;th&gt;AWATER10&lt;/th&gt;
+&lt;td&gt;1183688&lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt;&lt;/center&gt;</description>
+      <styleUrl>#KMLStyler</styleUrl>
+      <ExtendedData>
+        <SchemaData schemaUrl="#kml_schema_ft_cb_2016_us_zcta510_500k">
+          <SimpleData name="ZCTA5CE10">73664</SimpleData>
+          <SimpleData name="AFFGEOID10">8600000US73664</SimpleData>
+          <SimpleData name="GEOID10">73664</SimpleData>
+          <SimpleData name="ALAND10">338250127</SimpleData>
+          <SimpleData name="AWATER10">1183688</SimpleData>
+        </SchemaData>
+      </ExtendedData>
+      <Polygon>
+        <extrude>0</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>clampToGround</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-99.364529,35.284115,0.0 -99.364392,35.212837,0.0 -99.364289,35.204466,0.0 -99.360219,35.204464,0.0 -99.360226,35.116738,0.0 -99.219487,35.116697,0.0 -99.192235,35.116511,0.0 -99.099824,35.116633,0.0 -99.11354,35.14397,0.0 -99.113538,35.174866,0.0 -99.095827,35.174776,0.0 -99.095771,35.189517,0.0 -99.113561,35.189442,0.0 -99.113464,35.204364,0.0 -99.117359,35.204354,0.0 -99.117413,35.211641,0.0 -99.126381,35.211637,0.0 -99.126368,35.218859,0.0 -99.135058,35.218843,0.0 -99.135005,35.233338,0.0 -99.161546,35.233376,0.0 -99.161517,35.226061,0.0 -99.170456,35.225493,0.0 -99.170435,35.218839,0.0 -99.205543,35.218817,0.0 -99.205492,35.233302,0.0 -99.214248,35.233287,0.0 -99.214258,35.247801,0.0 -99.223115,35.24784,0.0 -99.223087,35.25501,0.0 -99.240892,35.255145,0.0 -99.240834,35.247922,0.0 -99.27617,35.247989,0.0 -99.27612,35.277027,0.0 -99.285397,35.277055,0.0 -99.284905,35.278415,0.0 -99.285574,35.281209,0.0 -99.288453,35.28435,0.0 -99.293849,35.28431,0.0 -99.293866,35.277029,0.0 -99.311608,35.276868,0.0 -99.311562,35.286167,0.0 -99.311253,35.287395,0.0 -99.31149,35.291373,0.0 -99.329175,35.29133,0.0 -99.329105,35.276769,0.0 -99.355675,35.276847,0.0 -99.355595,35.284098,0.0 -99.364529,35.284115,0.0</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

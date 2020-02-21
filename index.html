@@ -3,17 +3,193 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>Zip2KML</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <style>
+      html,body{
+        overflow: hidden;
+      }
+      .upload-button{
+        width: 50px;
+        height: 80px;
+        margin-right: 50px;
+        border: none;
+        vertical-align: center;
+        background: url('images/upload.png')no-repeat;
+        background-size: contain;
+        overflow: visible !important;
+      }
+
+      .download-button{
+        width: 50px;
+        height: 80px;
+        margin-left: 50px;
+        border: none;
+        vertical-align: center;
+        background: url('images/download.png')no-repeat;
+        background-size: contain;
+        overflow: visible !important;
+      }
+
+      .empty{
+        opacity: 30%;
+      }
+
+      .download-button:focus{
+        outline:none;
+      }
+
+      .upload-button:focus{
+        outline: none;
+      }
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5%;
+      }
+      * {box-sizing:border-box}
+
+      /* Slideshow container */
+      .slideshow-container {
+        width:50%;
+        margin-left: 25%;
+        position: relative;
+      }
+
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: relative;
+        margin-top: -40px;
+        width: 100%;
+        text-align: center;
+      }
+
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 5px;
+        width: 5px;
+        margin: 10px 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <h1></h1>
+      <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides">
+          <img src="images/info2.png" style="width:100%;">
+          <div class="text">Each .csv file must have a column titled "zip"</div>
+        </div>
+
+        <div class="mySlides">
+          <img src="images/info1.png" style="width:100%;">
+          <div class="text">Select a .csv file or a folder containing .csv files.</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+    </div>
+    <div class="wrapper">
+      <button class="upload-button" id="select-directory">
+          <p style="margin-top:45px;font-size:12px;color:white;text-align:center;">.csv</p>
+      </button>
+      <button class="download-button empty" id="select-output">
+          <p style="margin-top:45px;font-size:12px;color:white;text-align:center;">.kml</p>
+      </button>
+    </div>
+    <p id="error-message" style="color:rgb(255, 41, 41); width: 70%;margin-left:15%;text-align:center;"></p>
+
+
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
   </body>
+  <script>
+  var slideIndex = 0;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  }
+  </script>
 </html>
